@@ -123,11 +123,11 @@
                 <div class="team-main-box">
                     <img src="{{ asset('images/team/3.jpg') }}">
                     <div class="team-content-box">
-                        <ul>
+                        <!-- <ul>
                             <li><i class="fab fa-facebook-f"></i></li>
                             <li><i class="fab fa-twitter"></i></li>
                             <li><i class="fab fa-instagram"></i></li>
-                        </ul>
+                        </ul> -->
                         <h3>Williams</h3>
                         <b>Attorneys</b>
                     </div>
@@ -138,11 +138,11 @@
                 <div class="team-main-box">
                     <img src="{{ asset('images/team/2.jpg') }}">
                     <div class="team-content-box">
-                        <ul>
+                        <!-- <ul>
                             <li><i class="fab fa-facebook-f"></i></li>
                             <li><i class="fab fa-twitter"></i></li>
                             <li><i class="fab fa-instagram"></i></li>
-                        </ul>
+                        </ul> -->
                         <h3>Anderson john</h3>
                         <b>Criminal Consultant</b>
                     </div>
@@ -153,11 +153,11 @@
                 <div class="team-main-box">
                     <img src="{{ asset('images/team/4.jpg') }}">
                     <div class="team-content-box">
-                        <ul>
+                        <!-- <ul>
                             <li><i class="fab fa-facebook-f"></i></li>
                             <li><i class="fab fa-twitter"></i></li>
                             <li><i class="fab fa-instagram"></i></li>
-                        </ul>
+                        </ul> -->
                         <h3>Sarah Se</h3>
                         <b>Family Consultant</b>
                     </div>
@@ -166,13 +166,13 @@
 
             <div class="col-lg-3 col-md-4 col-sm-6 col-6">
                 <div class="team-main-box">
-                    <img src="{{ asset('images/team/1.jpg') }}">
+                    <img src="{{ asset('images/team/1.jpeg') }}">
                     <div class="team-content-box">
-                        <ul>
+                        <!-- <ul>
                             <li><i class="fab fa-facebook-f"></i></li>
                             <li><i class="fab fa-twitter"></i></li>
                             <li><i class="fab fa-instagram"></i></li>
-                        </ul>
+                        </ul> -->
                         <h3>Williams</h3>
                         <b>Divorce Consultant</b>
                     </div>

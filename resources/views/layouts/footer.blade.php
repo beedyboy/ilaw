@@ -3,9 +3,9 @@
         <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
             <div class="_kl_ds_we">
                 <div class="head-footer">
-                    <h3>Lawyers</h3>
-                    <p>ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                        tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <h3>Ryan Jeffery</h3>
+                    <p>Discover trusted legal counsel in our firm. Our dedicated team of attorneys is committed to providing exceptional service and expert guidance for all your legal needs. Contact us today to explore your legal options and secure your future.</p>
+            
                     <ol>
                         <li><i class="fab fa-facebook-square"></i></li>
                         <li><i class="fab fa-instagram"></i></li>

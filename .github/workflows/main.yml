@@ -1,0 +1,39 @@
+name: Deploy to Heroku
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '7.4'
+
+      - name: Install dependencies
+        run: composer install --no-interaction --no-ansi
+
+      - name: Configure environment variables
+        run: cp .env.example .env
+
+      - name: Generate application key
+        run: php artisan key:generate
+
+      - name: Run database migrations
+        run: php artisan migrate --force
+
+      - name: Deploy to Heroku
+        run: |
+          heroku container:login
+          heroku container:push web -a ryanjeffery
+          heroku container:release web -a ryanjeffery
+        env:
+          HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
