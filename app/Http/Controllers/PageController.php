@@ -47,7 +47,8 @@ class PageController extends Controller
         ];
 
 
-        Mail::to('boladebode@email.com')->send(new ContactFormMail($data));
+        Mail::to('ryanjeffery526@gmail.com')->send(new ContactFormMail($data));
+        $request->session()->flash('success', 'Your message has been sent successfully.');
 
         return view('pages.contact')->with('success', 'Your message has been sent successfully.');
     }

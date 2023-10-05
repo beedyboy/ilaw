@@ -1,5 +1,10 @@
 @extends('layouts.app')
 @section('title', 'Contact')
+
+@section('head')
+<meta name="csrf-token" content="{{ csrf_token() }}" />
+
+@endsection
 @section('content')
 <section class="abt-01">
     <div class="container">

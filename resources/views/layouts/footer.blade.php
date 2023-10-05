@@ -55,7 +55,7 @@
                 <div class="head-footer">
                     <h3>find us</h3>
                     <ul class="un-hover">
-                        <li><i class="far fa-location"></i>Marthandam</li>
+                        <li><i class="far fa-location"></i>Kentucky</li>
                         <li><i class="fas fa-mobile-alt"></i>+1 206-647-5312</li>
                         <li><i class="far fa-envelope"></i>ryanjeffery526@gmail.com</li>
                     </ul>

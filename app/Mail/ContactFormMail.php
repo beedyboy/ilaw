@@ -23,7 +23,7 @@ class ContactFormMail extends Mailable
     public function build()
 {
     // dd($this->viewData); // Debugging statement
-    return $this->from('boladebode@email.com')
+    return $this->from('landespare@gmail.com')
                 ->subject('Contact Notification')
                 ->view('emails.contact');
 }
