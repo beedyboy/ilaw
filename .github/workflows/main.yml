@@ -21,8 +21,8 @@ jobs:
       - name: Install dependencies
         run: composer install --no-interaction --no-ansi
 
-      - name: Configure environment variables
-        run: cp .env.example .env
+      # - name: Configure environment variables
+      #   run: cp .env.example .env
 
       # - name: Generate application key
       #   run: php artisan key:generate
@@ -37,3 +37,4 @@ jobs:
           heroku container:release web -a ryanjeffery
         env:
           HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
+          APP_ENV: production
