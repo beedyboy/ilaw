@@ -13,28 +13,28 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Setup PHP
+      - name: Set up PHP
         uses: shivammathur/setup-php@v2
         with:
-          php-version: '8.1'
+          php-version: '8.0'  # Set to PHP 8.0
 
-      - name: Install dependencies
+      - name: Install Composer dependencies
         run: composer install --no-interaction --no-ansi
 
-      # - name: Configure environment variables
-      #   run: cp .env.example .env
+      - name: Copy .env file
+        run: cp .env.example .env
 
-      # - name: Generate application key
-      #   run: php artisan key:generate
+      - name: Generate application key
+        run: php artisan key:generate
 
-      # - name: Run database migrations
-      #   run: php artisan migrate --force
+      - name: Run database migrations
+        run: php artisan migrate --force
 
       - name: Deploy to Heroku
         run: |
-          heroku container:login
-          heroku container:push web -a ryanjeffery
-          heroku container:release web -a ryanjeffery
+          echo "$HEROKU_API_KEY" | docker login --username=_ --password-stdin registry.heroku.com
+          heroku container:push web -a ryanjeffery  # Use your Heroku app name
+          heroku container:release web -a ryanjeffery  # Use your Heroku app name
         env:
           HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
           APP_ENV: production
