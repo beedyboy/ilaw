@@ -18,4 +18,4 @@ Route::get('/', [PageController::class, 'index']);
 Route::get('/services', [PageController::class, 'services']);
 Route::get('/about-us', [PageController::class, 'about']);
 Route::get('/contact-us', [PageController::class, 'contact']);
-Route::post('/contact', 'PageController@sendContactEmail');
+Route::post('/contact-us', [PageController::class, 'sendContactEmail']);

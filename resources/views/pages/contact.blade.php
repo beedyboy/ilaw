@@ -34,9 +34,10 @@
                 {{ session('success') }}
             </div>
             @endif
+ 
 
             <form method="POST" action="{{ url('/contact-us') }}">
-
+            @csrf
                 <div class="row">
                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                         <div class="form-group">
@@ -64,13 +65,13 @@
 
                     <div class="col-12">
                         <div class="form-group">
-                            <textarea name="message" cols="30" rows="8" required="" data-error="Write your message" placeholder="Case Description" class="form-control"></textarea>
+                            <textarea name="description" cols="30" rows="8" required="" data-error="Write your message" placeholder="Case Description" class="form-control"></textarea>
                         </div>
                     </div>
 
                     <div class="col-12">
                         <div class="btn-001">
-                            <a href="#">Submit</a>
+                        <button type="submit" class="btn btn-primary">Submit</button>
                         </div>
                     </div>
                 </div>

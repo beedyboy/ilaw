@@ -13,33 +13,41 @@ class ContactFormMail extends Mailable
 {
     use Queueable, SerializesModels;
 
-    /**
-     * Create a new message instance.
-     */
-    public function __construct()
+    public $data;
+
+    public function __construct($data)
     {
-        //
+        $this->data = $data;
     }
+
+    public function build()
+{
+    // dd($this->viewData); // Debugging statement
+    return $this->from('boladebode@email.com')
+                ->subject('Contact Notification')
+                ->view('emails.contact');
+}
+
 
     /**
      * Get the message envelope.
      */
-    public function envelope(): Envelope
-    {
-        return new Envelope(
-            subject: 'Contact Notification',
-        );
-    }
+    // public function envelope(): Envelope
+    // {
+    //     return new Envelope(
+    //         subject: 'Contact Notification',
+    //     );
+    // }
 
     /**
      * Get the message content definition.
      */
-    public function content(): Content
-    {
-        return new Content(
-            view: 'view.name',
-        );
-    }
+    // public function content(): Content
+    // {
+    //     return new Content(
+    //         view: 'emails.contact',
+    //     );
+    // }
 
     /**
      * Get the attachments for the message.
